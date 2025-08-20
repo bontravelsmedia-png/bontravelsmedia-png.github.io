@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html#home" class="logo" aria-label="Back to Home"><span class="logo-mark">Bon</span> Travels</a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html#packages" class="nav-link">Packages</a></li>
+          <li><a href="index.html#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 100px;">
+    <section class="section">
+      <div class="container">
+        <div id="heroImage" class="card-media" style="border-radius: var(--radius-lg);"></div>
+        <header class="section-header" style="margin-top: 24px;">
+          <h1 id="title" class="section-title">Details</h1>
+          <p id="meta" class="section-subtitle"></p>
+        </header>
+        <div class="narrow">
+          <p id="description" class="lead"></p>
+          <div style="margin-top: 24px;">
+            <a id="backLink" class="btn btn-secondary" href="index.html">Back to website</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function(){
+      const params = new URLSearchParams(location.search);
+      const type = params.get('type') || '';
+      const title = params.get('title') || 'Details';
+      const image = params.get('image') || '';
+      const meta = params.get('meta') || '';
+      const desc = params.get('desc') || '';
+
+      document.getElementById('title').textContent = title;
+      if (meta) document.getElementById('meta').textContent = meta;
+      if (desc) document.getElementById('description').textContent = desc;
+      if (image) {
+        const hero = document.getElementById('heroImage');
+        hero.style.backgroundImage = `url('${image}')`;
+        hero.style.aspectRatio = '16/9';
+      }
+
+      const back = document.getElementById('backLink');
+      if (type === 'package') back.href = 'index.html#packages';
+      else if (type === 'destination') back.href = 'index.html#destinations';
+      else if (type === 'blog') back.href = 'index.html#blog';
+    })();
+  </script>
+</body>
+</html>
+
+

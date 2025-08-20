@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bon Travels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Admin Navigation -->
+    <nav class="admin-navbar">
+        <div class="admin-nav-container">
+            <div class="admin-nav-logo">
+                <img src="/destinations/erasebg-transformed.png" alt="Bon Travels Admin" class="admin-logo-image">
+                <span class="admin-brand">Bon Travels Admin</span>
+            </div>
+            
+            <div class="admin-nav-controls">
+                <div class="admin-user-info">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Admin User</span>
+                </div>
+                <button class="admin-logout-btn" onclick="adminDashboard.logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <!-- Admin Sidebar -->
+        <aside class="admin-sidebar">
+            <nav class="admin-menu">
+                <ul>
+                    <li class="active">
+                        <a href="#overview" class="admin-menu-link">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#bookings" class="admin-menu-link">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#customers" class="admin-menu-link">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#revenue" class="admin-menu-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Revenue</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#destinations" class="admin-menu-link">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Destinations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#security" class="admin-menu-link">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Security</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reports" class="admin-menu-link">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings" class="admin-menu-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Admin Main Content -->
+        <main class="admin-main">
+            <!-- Overview Section -->
+            <section id="overview" class="admin-section active">
+                <div class="admin-header">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back! Here's what's happening with Bon Travels today.</p>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="admin-stats-grid">
+                    <div class="admin-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Recent Bookings</h3>
+                            <p class="stat-number">24</p>
+                            <span class="stat-change positive">This week</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Active Users</h3>
+                            <p class="stat-number">156</p>
+                            <span class="stat-change positive">Currently online</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>System Status</h3>
+                            <p class="stat-number">Healthy</p>
+                            <span class="stat-change positive">All systems operational</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div class="admin-charts-row">
+                    <div class="admin-chart-card">
+                        <div class="chart-header">
+                            <h3>Recent Activity</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="activityChart" height="300"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="admin-chart-card">
+                        <div class="chart-header">
+                            <h3>System Performance</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="performanceChart" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Security Section -->
+            <section id="security" class="admin-section">
+                <div class="admin-header">
+                    <h1>Security & Compliance</h1>
+                    <p>Manage security settings, GDPR compliance, and data protection measures.</p>
+                </div>
+
+                <div class="admin-security-grid">
+                    <!-- GDPR Compliance -->
+                    <div class="admin-security-card">
+                        <div class="security-card-header">
+                            <div class="security-icon">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="security-info">
+                                <h3>GDPR Compliance</h3>
+                                <p>Ensure data protection compliance with European regulations</p>
+                                <span class="status-badge pending">Pending Check</span>
+                            </div>
+                        </div>
+                        <div class="security-card-actions">
+                            <button class="admin-btn primary" onclick="adminDashboard.runGDPRComplianceCheck()">
+                                <i class="fas fa-check-circle"></i>
+                                Run Compliance Check
+                            </button>
+                            <button class="admin-btn secondary">
+                                <i class="fas fa-file-alt"></i>
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Data Encryption -->
+                    <div class="admin-security-card">
+                        <div class="security-card-header">
+                            <div class="security-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="security-info">
+                                <h3>Data Encryption</h3>
+                                <p>Manage encryption settings for sensitive data</p>
+                                <span class="status-badge active">Active</span>
+                            </div>
+                        </div>
+                        <div class="security-card-actions">
+                            <button class="admin-btn primary" onclick="adminDashboard.updateEncryptionSettings()">
+                                <i class="fas fa-cog"></i>
+                                Update Settings
+                            </button>
+                            <button class="admin-btn secondary">
+                                <i class="fas fa-key"></i>
+                                Manage Keys
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Controls -->
+                    <div class="admin-security-card">
+                        <div class="security-card-header">
+                            <div class="security-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div class="security-info">
+                                <h3>Privacy Controls</h3>
+                                <p>Configure user privacy settings and data handling</p>
+                                <span class="status-badge active">Active</span>
+                            </div>
+                        </div>
+                        <div class="security-card-actions">
+                            <button class="admin-btn primary" onclick="adminDashboard.configurePrivacySettings()">
+                                <i class="fas fa-cog"></i>
+                                Configure Settings
+                            </button>
+                            <button class="admin-btn secondary">
+                                <i class="fas fa-eye"></i>
+                                View Policies
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Document Security -->
+                    <div class="admin-security-card">
+                        <div class="security-card-header">
+                            <div class="security-icon">
+                                <i class="fas fa-file-shield"></i>
+                            </div>
+                            <div class="security-info">
+                                <h3>Document Security</h3>
+                                <p>Secure document upload and storage management</p>
+                                <span class="status-badge active">Active</span>
+                            </div>
+                        </div>
+                        <div class="security-card-actions">
+                            <button class="admin-btn primary" onclick="adminDashboard.configureDocumentSecurity()">
+                                <i class="fas fa-cog"></i>
+                                Configure Security
+                            </button>
+                            <button class="admin-btn secondary">
+                                <i class="fas fa-upload"></i>
+                                Upload Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Status Overview -->
+                <div class="admin-security-overview">
+                    <h3>Security Status Overview</h3>
+                    <div class="security-status-grid">
+                        <div class="status-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>SSL Certificate: Valid</span>
+                        </div>
+                        <div class="status-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Firewall: Active</span>
+                        </div>
+                        <div class="status-item">
+                            <i class="fas fa-check-circle text-success"></i>
+                            <span>Data Backup: Enabled</span>
+                        </div>
+                        <div class="status-item">
+                            <i class="fas fa-exclamation-triangle text-warning"></i>
+                            <span>Last Security Scan: 2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports Section -->
+            <section id="reports" class="admin-section">
+                <div class="admin-header">
+                    <h1>Reports & Analytics</h1>
+                    <p>Generate comprehensive reports and analyze business performance.</p>
+                </div>
+
+                <div class="admin-reports-grid">
+                    <!-- Financial Reports -->
+                    <div class="admin-report-card">
+                        <div class="report-card-header">
+                            <h3>Financial Performance</h3>
+                            <div class="report-controls">
+                                <select class="report-period">
+                                    <option value="monthly">Monthly</option>
+                                    <option value="quarterly">Quarterly</option>
+                                    <option value="yearly">Yearly</option>
+                                </select>
+                                <button class="admin-btn small">
+                                    <i class="fas fa-download"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="financialChart" height="250"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Customer Analytics -->
+                    <div class="admin-report-card">
+                        <div class="report-card-header">
+                            <h3>Customer Analytics</h3>
+                            <div class="report-controls">
+                                <button class="admin-btn small">
+                                    <i class="fas fa-download"></i>
+                                    Export
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="customerChart" height="250"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Report Generator -->
+                    <div class="admin-report-generator">
+                        <h3>Generate Custom Reports</h3>
+                        <form class="report-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Report Type</label>
+                                    <select required>
+                                        <option value="">Select Report Type</option>
+                                        <option value="bookings">Booking Analysis</option>
+                                        <option value="revenue">Revenue Report</option>
+                                        <option value="customers">Customer Insights</option>
+                                        <option value="destinations">Destination Performance</option>
+                                        <option value="security">Security Audit</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Date Range</label>
+                                    <select required>
+                                        <option value="">Select Period</option>
+                                        <option value="7">Last 7 Days</option>
+                                        <option value="30">Last 30 Days</option>
+                                        <option value="90">Last 3 Months</option>
+                                        <option value="365">Last Year</option>
+                                        <option value="custom">Custom Range</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Format</label>
+                                    <select required>
+                                        <option value="pdf">PDF</option>
+                                        <option value="excel">Excel</option>
+                                        <option value="csv">CSV</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Include Charts</label>
+                                    <input type="checkbox" checked>
+                                </div>
+                            </div>
+                            <button type="submit" class="admin-btn primary">
+                                <i class="fas fa-file-alt"></i>
+                                Generate Report
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other sections would go here -->
+            <section id="bookings" class="admin-section">
+                <div class="admin-header">
+                    <h1>Bookings Management</h1>
+                    <p>Manage and monitor all flight and tour bookings.</p>
+                </div>
+                <!-- Booking management content would go here -->
+            </section>
+
+            <section id="customers" class="admin-section">
+                <div class="admin-header">
+                    <h1>Customer Management</h1>
+                    <p>Manage customer accounts and relationships.</p>
+                </div>
+                <!-- Customer management content would go here -->
+            </section>
+
+            <section id="revenue" class="admin-section">
+                <div class="admin-header">
+                    <h1>Revenue Management</h1>
+                    <p>Track and analyze revenue streams.</p>
+                </div>
+                <!-- Revenue management content would go here -->
+            </section>
+
+            <section id="destinations" class="admin-section">
+                <div class="admin-header">
+                    <h1>Destinations Management</h1>
+                    <p>Manage destination information and content.</p>
+                </div>
+                <!-- Destinations management content would go here -->
+            </section>
+
+            <section id="settings" class="admin-section">
+                <div class="admin-header">
+                    <h1>System Settings</h1>
+                    <p>Configure system-wide settings and preferences.</p>
+                </div>
+                <!-- Settings content would go here -->
+            </section>
+        </main>
+    </div>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

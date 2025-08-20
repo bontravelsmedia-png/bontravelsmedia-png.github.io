@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow admin areas from being indexed
+Disallow: /admin-login.html
+Disallow: /admin-dashboard.html
+Disallow: /admin-dashboard.js
+Disallow: /admin-login.js
+
+# Disallow configuration files
+Disallow: /sendgrid-config.js
+Disallow: /*.md
+
+# Allow important directories
+Allow: /destinations/
+Allow: /blogs/
+Allow: /styles.css
+Allow: /script.js
+
+# Sitemap location
+Sitemap: https://bontravels.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to server)
+Crawl-delay: 1

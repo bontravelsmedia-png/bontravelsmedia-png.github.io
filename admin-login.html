@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Bon Travels</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Admin Login Container -->
+    <div class="admin-login-container">
+        <div class="admin-login-card">
+            <div class="admin-login-header">
+                <div class="admin-logo">
+                    <img src="/destinations/erasebg-transformed (1).png" alt="Bon Travels Login" class="admin-logo-image">
+                    <h1>Bon Travels Login</h1>
+                </div>
+                <p>Secure access to administrative dashboard</p>
+            </div>
+
+            <!-- Login Form -->
+            <form class="admin-login-form" id="adminLoginForm">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Username
+                    </label>
+                    <input type="text" id="username" name="username" required 
+                           placeholder="Enter your username" autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <div class="password-input-group">
+                        <input type="password" id="password" name="password" required 
+                               placeholder="Enter your password" autocomplete="current-password">
+                        <button type="button" class="password-toggle" id="passwordToggle">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength">
+                        <span>Strength: </span>
+                        <span id="passwordStrength" class="strength-weak">Weak</span>
+                    </div>
+                </div>
+
+                <!-- Two-Factor Authentication -->
+                <div class="form-group" id="twoFactorContainer" style="display: none;">
+                    <label for="twoFactorCode">
+                        <i class="fas fa-shield-alt"></i>
+                        Two-Factor Code
+                    </label>
+                    <div class="two-factor-input-group">
+                        <input type="text" id="twoFactorCode" name="twoFactorCode" 
+                               placeholder="Enter 6-digit code" maxlength="6" pattern="[0-9]{6}">
+                        <button type="button" class="resend-code-btn" id="resendCodeBtn" style="display: none;">
+                            <i class="fas fa-redo"></i>
+                            Resend
+                        </button>
+                    </div>
+                    <small>2FA code will be sent after password verification</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span class="checkmark"></span>
+                        Remember this device for 30 days
+                    </label>
+                </div>
+
+                <button type="submit" class="admin-login-btn" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span>Sign In</span>
+                </button>
+                
+                <!-- Login Error Display -->
+                <div id="loginError" class="login-error" style="display: none;"></div>
+            </form>
+
+
+
+            <!-- Help & Support -->
+            <div class="admin-help-section">
+                <p>Need help? Contact your system administrator</p>
+                <div class="help-links">
+                    <a href="#" class="help-link">
+                        <i class="fas fa-question-circle"></i>
+                        Forgot Password?
+                    </a>
+                    <a href="#" class="help-link">
+                        <i class="fas fa-life-ring"></i>
+                        Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="sendgrid-config.js"></script>
+    <script src="admin-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Test</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .nav-search-container {
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .search-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            backdrop-filter: blur(25px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 35px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .search-input {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            outline: none;
+            color: #2c3e50;
+            font-size: 16px;
+            padding: 10px 18px 10px 45px;
+            flex: 1;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            border-radius: 25px;
+            margin-right: 12px;
+        }
+        
+        .search-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            color: white;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .search-suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            max-height: 400px;
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .search-suggestions.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .suggestion-category {
+            padding: 12px 20px 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(102, 126, 234, 0.05);
+            border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+        }
+        
+        .suggestion-item {
+            padding: 14px 20px;
+            margin: 0 8px;
+            border-radius: 12px;
+            margin-bottom: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .suggestion-item:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateX(8px);
+        }
+        
+        .suggestion-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .suggestion-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .suggestion-meta {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        .suggestion-item i {
+            color: #667eea;
+            margin-right: 15px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .test-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .test-info h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        
+        .test-info ul {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🔍 Search Functionality Test</h1>
+        
+        <div class="nav-search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search destinations, flights, hotels, services..." class="search-input" autocomplete="off" spellcheck="false">
+                <button type="button" class="search-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="search-suggestions" id="searchSuggestions" role="listbox" aria-label="Search suggestions"></div>
+        </div>
+        
+        <div class="test-info">
+            <h3>Test Instructions:</h3>
+            <ul>
+                <li><strong>Type in the search box</strong> - You should see suggestions appear</li>
+                <li><strong>Try searching for:</strong> "bangkok", "tokyo", "flight", "hotel"</li>
+                <li><strong>Click on suggestions</strong> - They should be clickable</li>
+                <li><strong>Use keyboard navigation</strong> - Arrow keys, Enter, Escape</li>
+                <li><strong>Check console</strong> - Open browser dev tools to see debug info</li>
+            </ul>
+            
+            <h3>Expected Behavior:</h3>
+            <ul>
+                <li>Suggestions appear after typing 2+ characters</li>
+                <li>Results are categorized (Asia, Europe, Flights, etc.)</li>
+                <li>Hover effects and smooth animations</li>
+                <li>Search history is saved and displayed</li>
+                <li>Keyboard navigation works properly</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize search when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Test page loaded, initializing search...');
+            new SearchBar();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    
+    <!-- Primary Meta Tags -->
+    <title>Bon Travels - Your Journey Begins Here</title>
+    <meta name="title" content="Bon Travels - Your Journey Begins Here">
+    <meta name="description" content="Discover amazing destinations, book flights, and explore travel tips with Bon Travels. Your ultimate travel companion for unforgettable adventures around the world.">
+    <meta name="keywords" content="travel, flights, destinations, vacation, tourism, adventure, booking, travel tips, world travel, Bon Travels">
+    <meta name="author" content="Bon Travels">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bontravels.com/">
+    <meta property="og:title" content="Bon Travels - Your Journey Begins Here">
+    <meta property="og:description" content="Discover amazing destinations, book flights, and explore travel tips with Bon Travels. Your ultimate travel companion for unforgettable adventures around the world.">
+    <meta property="og:image" content="https://bontravels.com/destinations/erasebg-transformed.png">
+    <meta property="og:site_name" content="Bon Travels">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bontravels.com/">
+    <meta property="twitter:title" content="Bon Travels - Your Journey Begins Here">
+    <meta property="twitter:description" content="Discover amazing destinations, book flights, and explore travel tips with Bon Travels. Your ultimate travel companion for unforgettable adventures around the world.">
+    <meta property="twitter:image" content="https://bontravels.com/destinations/erasebg-transformed.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="geo.region" content="NP">
+    <meta name="geo.placename" content="Kathmandu, Nepal">
+    <meta name="geo.position" content="27.7172;85.3184">
+    <meta name="ICBM" content="27.7172, 85.3184">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bontravels.com/">
+    
+    <!-- Structured Data for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Bon Travels",
+      "description": "Your trusted partner for unforgettable travel experiences around the world",
+      "url": "https://bontravels.com",
+      "logo": "https://bontravels.com/destinations/erasebg-transformed.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kamalpokhari",
+        "addressLocality": "Kathmandu",
+        "addressCountry": "NP"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+977-014538333",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://facebook.com/bontravels",
+        "https://twitter.com/bontravels",
+        "https://instagram.com/bontravels"
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://bontravels.com/destinations/erasebg-transformed (1).png">
+    <link rel="apple-touch-icon" href="https://bontravels.com/destinations/erasebg-transformed (1).png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <img src="https://bontravels.com/destinations/erasebg-transformed.png" alt="bon TRAVELS" class="logo-image">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#book-flight" class="nav-link">
+                        <i class="fas fa-plane"></i>
+                        <span>Book a Flight</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blogs" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        <span>Blogs</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Search Bar in Navigation -->
+            <div class="nav-search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search destinations, flights, hotels, services..." class="search-input" autocomplete="off" spellcheck="false">
+                    <button type="button" class="search-btn" id="searchBtn" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-suggestions" id="searchSuggestions" role="listbox" aria-label="Search suggestions"></div>
+            </div>
+            
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Admin Access Link -->
+            <div class="admin-access">
+                <a href="admin-login.html" class="admin-link" title="Admin Login">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Login</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Center Focused Image Slider -->
+    <section id="home" class="hero">
+        <img src="https://bontravels.com/destinations/plane.png" alt="Hero Background" class="hero-background-image">
+        <div class="slider-container">
+            <div class="center-focused-slider">
+                <!-- Left Side Container -->
+                <div class="side-container left-container" data-slide="2">
+                    <div class="side-slide">
+                        <img src="/destinations/website cover 1 (1920 x 1080 px).jpg" alt="Tropical Paradise">
+                    </div>
+                </div>
+                
+                <!-- Center Main Container -->
+                <div class="center-container">
+                    <div class="main-slide active">
+                        <img src="/destinations/Janmaastami (1920 x 1080 px).jpg" alt="Beautiful Landscape">
+                    </div>
+                    <div class="main-slide">
+                        <img src="/destinations/website cover 1 (1920 x 1080 px).jpg" alt="City Skyline">
+                    </div>
+                    <div class="main-slide">
+                        <img src="/destinations/website cover 2.png" alt="Tropical Paradise">
+                    </div>
+                </div>
+                
+                <!-- Right Side Container -->
+                <div class="side-container right-container" data-slide="1">
+                    <div class="side-slide">
+                        <img src="/destinations/website cover 2.png" alt="City Skyline">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="destinations">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card thailand">
+                    <div class="country-header">
+                        <span class="country-name">Thailand</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/bangkok.html"><i class="fas fa-city"></i> Bangkok</a>
+                        <a href="destinations/phuket.html"><i class="fas fa-umbrella-beach"></i> Phuket</a>
+                        <a href="destinations/chiang-mai.html"><i class="fas fa-mountain"></i> Chiang Mai</a>
+                    </div>
+                </div>
+                <div class="destination-card singapore">
+                    <div class="country-header">
+                        <span class="country-name">Singapore</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/singapore-city.html"><i class="fas fa-city"></i> Singapore City</a>
+                        <a href="destinations/sentosa.html"><i class="fas fa-water"></i> Sentosa</a>
+                    </div>
+                </div>
+                <div class="destination-card europe">
+                    <div class="country-header">
+                        <span class="country-name">Europe</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/paris.html"><i class="fas fa-archway"></i> Paris</a>
+                        <a href="destinations/rome.html"><i class="fas fa-landmark"></i> Rome</a>
+                        <a href="destinations/barcelona.html"><i class="fas fa-chess-rook"></i> Barcelona</a>
+                    </div>
+                </div>
+                <div class="destination-card japan">
+                    <div class="country-header">
+                        <span class="country-name">Japan</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/tokyo.html"><i class="fas fa-city"></i> Tokyo</a>
+                        <a href="destinations/kyoto.html"><i class="fas fa-torii-gate"></i> Kyoto</a>
+                        <a href="destinations/osaka.html"><i class="fas fa-warehouse"></i> Osaka</a>
+                    </div>
+                </div>
+                <div class="destination-card australia">
+                    <div class="country-header">
+                        <span class="country-name">Australia</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/sydney.html"><i class="fas fa-bridge"></i> Sydney</a>
+                        <a href="destinations/melbourne.html"><i class="fas fa-tree"></i> Melbourne</a>
+                        <a href="destinations/gold-coast.html"><i class="fas fa-water"></i> Gold Coast</a>
+                    </div>
+                </div>
+                <div class="destination-card usa">
+                    <div class="country-header">
+                        <span class="country-name">United States</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/san-francisco.html"><i class="fas fa-bridge"></i> San Francisco</a>
+                        <a href="destinations/new-york.html"><i class="fas fa-city"></i> New York</a>
+                        <a href="destinations/los-angeles.html"><i class="fas fa-film"></i> Los Angeles</a>
+                    </div>
+                </div>
+                <div class="destination-card uk">
+                    <div class="country-header">
+                        <span class="country-name">United Kingdom</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/london.html"><i class="fas fa-city"></i> London</a>
+                        <a href="destinations/edinburgh.html"><i class="fas fa-castle"></i> Edinburgh</a>
+                        <a href="destinations/manchester.html"><i class="fas fa-futbol"></i> Manchester</a>
+                    </div>
+                </div>
+                <div class="destination-card uae">
+                    <div class="country-header">
+                        <span class="country-name">United Arab Emirates</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/dubai.html"><i class="fas fa-building"></i> Dubai</a>
+                        <a href="destinations/abu-dhabi.html"><i class="fas fa-mosque"></i> Abu Dhabi</a>
+                    </div>
+                </div>
+                <div class="destination-card south-korea">
+                    <div class="country-header">
+                        <span class="country-name">South Korea</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/seoul.html"><i class="fas fa-city"></i> Seoul</a>
+                        <a href="destinations/busan.html"><i class="fas fa-water"></i> Busan</a>
+                    </div>
+                </div>
+                <div class="destination-card canada">
+                    <div class="country-header">
+                        <span class="country-name">Canada</span>
+                    </div>
+                    <div class="cities">
+                        <a href="destinations/toronto.html"><i class="fas fa-city"></i> Toronto</a>
+                        <a href="destinations/vancouver.html"><i class="fas fa-water"></i> Vancouver</a>
+                        <a href="destinations/montreal.html"><i class="fas fa-mountain"></i> Montreal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed Departures -->
+    <section class="fixed-departures">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Fixed Flights</h2>
+                <p class="section-subtitle">Book your flights with major airlines on specific dates</p>
+            </div>
+            <div class="departures-grid">
+                <div class="departure-card">
+                    <div class="departure-image">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Bangkok">
+                        <div class="airline-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Thai_Airways_logo.svg/1200px-Thai_Airways_logo.svg.png" alt="Thai Airways">
+                        </div>
+                        <div class="departure-badge">Direct Flight</div>
+                    </div>
+                    <div class="departure-content">
+                        <div class="departure-header">
+                            <h3>Bangkok - Suvarnabhumi</h3>
+                            <div class="flight-number">TG 123</div>
+                        </div>
+                        <div class="departure-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>December 15, 2024</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Departure: 10:30 AM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-plane"></i>
+                                <span>Arrival: 2:45 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Route: KTM → BKK</span>
+                            </div>
+                        </div>
+                        <div class="departure-footer">
+                            <div class="price-info">
+                                <p class="price">$299</p>
+                                <p class="price-note">one way</p>
+                            </div>
+                            <button class="book-btn">Book Flight</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="departure-card">
+                    <div class="departure-image">
+                        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Tokyo">
+                        <div class="airline-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Japan_Airlines_logo.svg/1200px-Japan_Airlines_logo.svg.png" alt="Japan Airlines">
+                        </div>
+                        <div class="departure-badge">Premium Economy</div>
+                    </div>
+                    <div class="departure-content">
+                        <div class="departure-header">
+                            <h3>Tokyo - Narita</h3>
+                            <div class="flight-number">JL 456</div>
+                        </div>
+                        <div class="departure-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>December 20, 2024</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Departure: 2:15 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-plane"></i>
+                                <span>Arrival: 7:30 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Route: KTM → NRT</span>
+                            </div>
+                        </div>
+                        <div class="departure-footer">
+                            <div class="price-info">
+                                <p class="price">$599</p>
+                                <p class="price-note">one way</p>
+                            </div>
+                            <button class="book-btn">Book Flight</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="departure-card">
+                    <div class="departure-image">
+                        <img src="https://images.unsplash.com/photo-1502602898534-47d22c0d8068?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Paris">
+                        <div class="airline-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Air_France_logo.svg/1200px-Air_France_logo.svg.png" alt="Air France">
+                        </div>
+                        <div class="departure-badge">Business Class</div>
+                    </div>
+                    <div class="departure-content">
+                        <div class="departure-header">
+                            <h3>Paris - Charles de Gaulle</h3>
+                            <div class="flight-number">AF 789</div>
+                        </div>
+                        <div class="departure-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>January 5, 2025</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Departure: 11:45 AM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-plane"></i>
+                                <span>Arrival: 6:20 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Route: KTM → CDG</span>
+                            </div>
+                        </div>
+                        <div class="departure-footer">
+                            <div class="price-info">
+                                <p class="price">$899</p>
+                                <p class="price-note">one way</p>
+                            </div>
+                            <button class="book-btn">Book Flight</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive travel solutions tailored to your needs</p>
+            </div>
+            
+            <!-- Structured Data for Services -->
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "Travel Services",
+              "description": "Comprehensive travel solutions offered by Bon Travels",
+              "itemListElement": [
+                {
+                  "@type": "Service",
+                  "position": 1,
+                  "name": "Flight Booking",
+                  "description": "Find the best deals on flights to your dream destinations with our comprehensive booking service"
+                },
+                {
+                  "@type": "Service",
+                  "position": 2,
+                  "name": "Tour Packages",
+                  "description": "Curated tour packages designed to give you the most authentic and memorable travel experiences"
+                },
+                {
+                  "@type": "Service",
+                  "position": 3,
+                  "name": "Visa Services",
+                  "description": "Professional visa assistance to make your travel planning hassle-free and efficient"
+                },
+                {
+                  "@type": "Service",
+                  "position": 4,
+                  "name": "Hotel Reservations",
+                  "description": "Book comfortable and luxurious accommodations that suit your budget and preferences"
+                },
+                {
+                  "@type": "Service",
+                  "position": 5,
+                  "name": "Transportation",
+                  "description": "Reliable ground transportation services including airport transfers, car rentals, and private chauffeur services"
+                },
+                {
+                  "@type": "Service",
+                  "position": 6,
+                  "name": "Travel Insurance",
+                  "description": "Comprehensive travel insurance coverage to protect your journey and provide peace of mind"
+                }
+              ]
+            }
+            </script>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Flight Booking</h3>
+                        <p>Find the best deals on flights to your dream destinations with our comprehensive booking service. We partner with major airlines to ensure competitive prices and flexible booking options.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Best Price Guarantee</span>
+                            <span><i class="fas fa-check"></i> 24/7 Customer Support</span>
+                            <span><i class="fas fa-check"></i> Flexible Booking & Cancellation</span>
+                            <span><i class="fas fa-check"></i> Multi-City Itineraries</span>
+                            <span><i class="fas fa-check"></i> Business & Economy Options</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Tour Packages</h3>
+                        <p>Curated tour packages designed to give you the most authentic and memorable travel experiences. From adventure tours to luxury getaways, we craft perfect itineraries.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Expert Local Guides</span>
+                            <span><i class="fas fa-check"></i> Custom Itineraries</span>
+                            <span><i class="fas fa-check"></i> Group & Family Discounts</span>
+                            <span><i class="fas fa-check"></i> Cultural Experiences</span>
+                            <span><i class="fas fa-check"></i> All-Inclusive Packages</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Visa Services</h3>
+                        <p>Professional visa assistance to make your travel planning hassle-free and efficient. Our experts handle all documentation and ensure smooth processing.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Fast Processing Time</span>
+                            <span><i class="fas fa-check"></i> Complete Document Review</span>
+                            <span><i class="fas fa-check"></i> High Success Rate</span>
+                            <span><i class="fas fa-check"></i> Multiple Country Visas</span>
+                            <span><i class="fas fa-check"></i> Application Tracking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hotel Reservations</h3>
+                        <p>Book comfortable and luxurious accommodations that suit your budget and preferences. We offer verified properties with guaranteed best rates.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Guaranteed Best Rates</span>
+                            <span><i class="fas fa-check"></i> Verified & Rated Properties</span>
+                            <span><i class="fas fa-check"></i> Instant Confirmation</span>
+                            <span><i class="fas fa-check"></i> Free Cancellation</span>
+                            <span><i class="fas fa-check"></i> Special Group Rates</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Transportation</h3>
+                        <p>Reliable ground transportation services including airport transfers, car rentals, and private chauffeur services for seamless travel.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Airport Transfers</span>
+                            <span><i class="fas fa-check"></i> Car & Bus Rentals</span>
+                            <span><i class="fas fa-check"></i> Private Chauffeur</span>
+                            <span><i class="fas fa-check"></i> 24/7 Availability</span>
+                            <span><i class="fas fa-check"></i> Meet & Greet Service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Travel Insurance</h3>
+                        <p>Comprehensive travel insurance coverage to protect your journey and provide peace of mind during your travels.</p>
+                        <div class="service-features">
+                            <span><i class="fas fa-check"></i> Medical Coverage</span>
+                            <span><i class="fas fa-check"></i> Trip Cancellation</span>
+                            <span><i class="fas fa-check"></i> Baggage Protection</span>
+                            <span><i class="fas fa-check"></i> 24/7 Emergency Support</span>
+                            <span><i class="fas fa-check"></i> Worldwide Coverage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blogs" class="blog">
+        <img src="/destinations/lundar.png" alt="Blog Background" class="blog-background-image">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Blogs</h2>
+                <p class="section-subtitle">Insights, tips, and stories from our travel experts</p>
+            </div>
+            
+            <!-- Structured Data for Blog Posts -->
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              "name": "Latest Travel Blogs",
+              "description": "Insights, tips, and stories from our travel experts",
+              "itemListElement": [
+                {
+                  "@type": "BlogPosting",
+                  "position": 1,
+                  "headline": "10 Essential Travel Tips for First-Time Travelers",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Sarah Johnson"
+                  },
+                  "datePublished": "2024-12-01",
+                  "dateModified": "2024-12-01",
+                  "description": "Discover the essential tips and tricks that every first-time traveler should know to make their journey smooth and enjoyable.",
+                  "url": "https://bontravels.com/blogs/travel-tips.html",
+                  "image": "https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                },
+                {
+                  "@type": "BlogPosting",
+                  "position": 2,
+                  "headline": "Budget Travel: How to Explore the World on a Shoestring",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Mike Chen"
+                  },
+                  "datePublished": "2024-11-28",
+                  "dateModified": "2024-11-28",
+                  "description": "Learn how to travel the world without breaking the bank with these proven budget travel strategies.",
+                  "url": "https://bontravels.com/blogs/budget-travel.html",
+                  "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                },
+                {
+                  "@type": "BlogPosting",
+                  "position": 3,
+                  "headline": "Hidden Gems: Off-the-Beaten-Path Destinations",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Emma Davis"
+                  },
+                  "datePublished": "2024-11-25",
+                  "dateModified": "2024-11-25",
+                  "description": "Explore lesser-known destinations that offer authentic experiences away from tourist crowds.",
+                  "url": "https://bontravels.com/blogs/hidden-gems.html",
+                  "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                }
+              ]
+            }
+            </script>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Travel Tips">
+                        <div class="blog-category">Travel Tips</div>
+                        <div class="blog-overlay">
+                            <div class="blog-stats">
+                                <span><i class="fas fa-eye"></i> 2.4k</span>
+                                <span><i class="fas fa-heart"></i> 156</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-header">
+                            <h3>10 Essential Travel Tips for First-Time Travelers</h3>
+                            <div class="blog-meta">
+                                <span class="date"><i class="fas fa-calendar"></i> December 1, 2024</span>
+                                <span class="author"><i class="fas fa-user"></i> Sarah Johnson</span>
+                            </div>
+                        </div>
+                        <p class="blog-excerpt">Discover the essential tips and tricks that every first-time traveler should know to make their journey smooth and enjoyable.</p>
+                        <div class="blog-footer">
+                            <div class="read-time">
+                                <i class="fas fa-clock"></i>
+                                <span>5 min read</span>
+                            </div>
+                            <a href="blogs/travel-tips.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Budget Travel">
+                        <div class="blog-category">Budget Travel</div>
+                        <div class="blog-overlay">
+                            <div class="blog-stats">
+                                <span><i class="fas fa-eye"></i> 1.8k</span>
+                                <span><i class="fas fa-heart"></i> 98</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-header">
+                            <h3>Budget Travel: How to Explore the World on a Shoestring</h3>
+                            <div class="blog-meta">
+                                <span class="date"><i class="fas fa-calendar"></i> November 28, 2024</span>
+                                <span class="author"><i class="fas fa-user"></i> Mike Chen</span>
+                            </div>
+                        </div>
+                        <p class="blog-excerpt">Learn how to travel the world without breaking the bank with these proven budget travel strategies.</p>
+                        <div class="blog-footer">
+                            <div class="read-time">
+                                <i class="fas fa-clock"></i>
+                                <span>7 min read</span>
+                            </div>
+                            <a href="blogs/budget-travel.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hidden Gems">
+                        <div class="blog-category">Destinations</div>
+                        <div class="blog-overlay">
+                            <div class="blog-stats">
+                                <span><i class="fas fa-eye"></i> 3.1k</span>
+                                <span><i class="fas fa-heart"></i> 203</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-header">
+                            <h3>Hidden Gems: Off-the-Beaten-Path Destinations</h3>
+                            <div class="blog-meta">
+                                <span class="date"><i class="fas fa-calendar"></i> November 25, 2024</span>
+                                <span class="author"><i class="fas fa-user"></i> Emma Davis</span>
+                            </div>
+                        </div>
+                        <p class="blog-excerpt">Explore lesser-known destinations that offer authentic experiences away from tourist crowds.</p>
+                        <div class="blog-footer">
+                            <div class="read-time">
+                                <i class="fas fa-clock"></i>
+                                <span>6 min read</span>
+                            </div>
+                            <a href="blogs/hidden-gems.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book a Flight Section -->
+    <section id="book-flight" class="book-flight">
+        <div class="container">
+            <h2 class="section-title">Book a Flight</h2>
+            <div class="book-flight-content">
+                <div class="map-section">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.1234567890123!2d85.3184!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19c0b0b0b0b0%3A0x0!2sKamalpokhari%2C%20Kathmandu%2C%20Nepal!5e0!3m2!1sen!2s!4v1640995200000!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Kamalpokhari, Kathmandu, Nepal</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+977-014538333 / +977-014538666</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@bontravels.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>booking@bontravels.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Mon-Fri: 9AM-6PM NPT</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <form class="contact-form" action="https://formspree.io/f/xkgzyarg" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Bon Travels">
+                        <input type="hidden" name="_replyto" value="">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_honey" value="">
+                        <input type="hidden" name="_next" value="?success=true">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
+                        </div>
+                        
+                        <!-- CAPTCHA Section -->
+                        <div class="form-group captcha-group">
+                            <label for="captcha-input">Security Check:</label>
+                            <div class="captcha-container">
+                                <div class="captcha-display" id="captcha-display"></div>
+                                <button type="button" class="refresh-captcha" id="refresh-captcha">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                            <input type="text" id="captcha-input" name="captcha" placeholder="Enter the code above" required>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div id="success-message" class="success-message" style="display: none;">
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                    <div class="sasto-tickets">
+                        <h3>Looking for More Options?</h3>
+                        <p>Check out our partner website for additional flight deals and packages.</p>
+                        <a href="https://sastotickets.com/" target="_blank" class="sasto-btn">Visit Sasto Tickets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-subtitle">Meet our passionate team of travel experts dedicated to making your dreams take flight</p>
+            </div>
+            
+            <div class="about-intro">
+                <div class="about-text">
+                    <h3>Your Trusted Travel Partner</h3>
+                    <p>At Bon Travels, we believe that travel has the power to transform lives. Since our founding, we've been dedicated to creating extraordinary travel experiences that go beyond the ordinary. Our diverse team of 15 passionate travel experts works tirelessly to craft journeys that inspire, educate, and create lasting memories.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Expert Team Members</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Happy Travelers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Destinations</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-showcase">
+                <h3 class="team-title">Meet Our Team</h3>
+                <div class="team-grid">
+                    <!-- Leadership Team -->
+                    <div class="team-member leadership">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="John Smith">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>John Smith</h4>
+                            <p class="position">CEO & Founder</p>
+                            <p class="member-bio">Visionary leader with 15+ years in travel industry, passionate about making travel accessible to everyone.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member leadership">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sarah Johnson">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Sarah Johnson</h4>
+                            <p class="position">Travel Director</p>
+                            <p class="member-bio">Expert in crafting unique itineraries and ensuring every journey is memorable and authentic.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member leadership">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mike Chen">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Mike Chen</h4>
+                            <p class="position">CTO & Lead Developer</p>
+                            <p class="member-bio">Tech enthusiast who builds innovative solutions to enhance your travel planning experience.</p>
+                        </div>
+                    </div>
+
+                    <!-- Travel Experts -->
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Emily Davis">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Emily Davis</h4>
+                            <p class="position">Senior Travel Consultant</p>
+                            <p class="member-bio">Asia-Pacific specialist with deep knowledge of local cultures and hidden gems.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="David Rodriguez">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>David Rodriguez</h4>
+                            <p class="position">European Travel Specialist</p>
+                            <p class="member-bio">Born in Spain, David brings authentic European experiences to every itinerary.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Lisa Wang">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Lisa Wang</h4>
+                            <p class="position">Luxury Travel Curator</p>
+                            <p class="member-bio">Expert in crafting premium experiences for discerning travelers seeking exclusivity.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Alex Thompson">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Alex Thompson</h4>
+                            <p class="position">Adventure Travel Guide</p>
+                            <p class="member-bio">Former mountaineer who specializes in adrenaline-pumping adventure experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Maria Garcia">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Maria Garcia</h4>
+                            <p class="position">Family Travel Expert</p>
+                            <p class="member-bio">Mother of three who creates magical family vacations that kids and parents love.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="James Wilson">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>James Wilson</h4>
+                            <p class="position">Business Travel Coordinator</p>
+                            <p class="member-bio">Corporate travel specialist ensuring seamless business trips worldwide.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sophie Brown">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Sophie Brown</h4>
+                            <p class="position">Cultural Experience Specialist</p>
+                            <p class="member-bio">Anthropologist who designs immersive cultural experiences and local connections.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ryan Kim">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Ryan Kim</h4>
+                            <p class="position">Digital Marketing Manager</p>
+                            <p class="member-bio">Digital native who connects travelers with our services through innovative marketing.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nina Patel">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Nina Patel</h4>
+                            <p class="position">Customer Success Manager</p>
+                            <p class="member-bio">Dedicated to ensuring every traveler has an exceptional experience from start to finish.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Carlos Mendez">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Carlos Mendez</h4>
+                            <p class="position">Operations Manager</p>
+                            <p class="member-bio">Behind-the-scenes expert ensuring smooth operations and logistics for all trips.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Aisha Hassan">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Aisha Hassan</h4>
+                            <p class="position">Sustainability Travel Advisor</p>
+                            <p class="member-bio">Environmental advocate promoting eco-friendly and responsible travel practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Tom Anderson">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Tom Anderson</h4>
+                            <p class="position">Photography & Content Creator</p>
+                            <p class="member-bio">Professional photographer capturing the beauty of destinations to inspire future travelers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gradient Separator -->
+    <div class="section-separator">
+        <div class="separator-line"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-plane-departure"></i> Bon Travels</h3>
+                    <p>Your trusted partner for unforgettable travel experiences around the world. We make your dreams take flight with personalized service and unbeatable deals.</p>
+                    <div class="social-links">
+                        <a href="#" title="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Connect on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Subscribe to our YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#book-flight"><i class="fas fa-plane"></i> Book a Flight</a></li>
+                        <li><a href="#blogs"><i class="fas fa-blog"></i> Blogs</a></li>
+                        <li><a href="#about"><i class="fas fa-users"></i> About Us</a></li>
+                        <li><a href="#destinations"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-concierge-bell"></i> Our Services</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-plane"></i> Flight Booking</a></li>
+                        <li><a href="#"><i class="fas fa-suitcase"></i> Tour Packages</a></li>
+                        <li><a href="#"><i class="fas fa-passport"></i> Visa Services</a></li>
+                        <li><a href="#"><i class="fas fa-hotel"></i> Hotel Reservations</a></li>
+                        <li><a href="#"><i class="fas fa-car"></i> Car Rentals</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Travel Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><i class="fas fa-address-book"></i> Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Kamalpokhari, Kathmandu, Nepal</p>
+                        <p><i class="fas fa-phone"></i> +977-014538333 / +977-014538666</p>
+                        <p><i class="fas fa-envelope"></i> info@bontravels.com</p>
+                        <p><i class="fas fa-envelope"></i> booking@bontravels.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM NPT</p>
+                        <p><i class="fas fa-globe"></i> www.bontravels.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Bon Travels. All rights reserved. | Made with <i class="fas fa-heart" style="color: #ff6b6b;"></i> for travelers</p>
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <span class="separator">|</span>
+                        <a href="#">Terms of Service</a>
+                        <span class="separator">|</span>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
